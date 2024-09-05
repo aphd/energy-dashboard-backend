@@ -1,0 +1,11 @@
+### GET eth_blockNumber via dotenv
+POST https://mainnet.infura.io/v3/{{$dotenv %INFURA_API_KEY}}
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "eth_blockNumber",
+    "params": []
+} 
+
