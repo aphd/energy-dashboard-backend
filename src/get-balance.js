@@ -17,6 +17,6 @@ const getEtherBalance = async () => {
     }
 }
 
-getEtherBalance();
+if (require.main === module) getEtherBalance();
 
-module.exports = getEtherBalance;
+module.exports = {getEtherBalance};
