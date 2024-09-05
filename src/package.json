@@ -6,5 +6,8 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "web3": "^4.10.0"
-  }
+  },
+  "scripts": {
+    "test": "jest"
+}
 }

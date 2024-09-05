@@ -7,17 +7,17 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "send ether",
-			"skipFiles": [
-				"<node_internals>/**"
-			],
-			"program": "${workspaceFolder}/backend/send-ether.js"
+			"name": "get balance",
+			"program": "${workspaceFolder}/src/get-balance.js"
 		},
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "get balance",
-			"program": "${workspaceFolder}/backend/get-balance.js"
+			"name": "send ether",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/src/send-ether.js"
 		}
 	]
 }
