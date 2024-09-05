@@ -1,0 +1,7 @@
+{
+	"compilerOptions": {
+	  "types": ["node", "jest"],  // Add 'jest' here
+	  // other compiler options
+	},
+	"include": ["src", "tests"],  // Adjust the paths as needed
+  }

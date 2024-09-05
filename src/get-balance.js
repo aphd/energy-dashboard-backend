@@ -1,8 +1,9 @@
 const { Web3 } = require('web3');
 require('dotenv').config();
 const NETWORK = process.env.ETHEREUM_NETWORK;
+const address = process.env.FROM;
 
-async function getEtherBalance(address) {
+const getEtherBalance = async () => {
     // Configuring the connection to an Ethereum node
     const web3 = new Web3(new Web3.providers.HttpProvider(`https://${NETWORK}.infura.io/v3/${process.env.INFURA_API_KEY}`)); // prettier-ignore
 
@@ -16,10 +17,6 @@ async function getEtherBalance(address) {
     }
 }
 
-async function main() {
-    // You can replace this with any Ethereum address
-    const address = process.env.FROM;
-    await getEtherBalance(address);
-}
+getEtherBalance();
 
-main();
+module.exports = getEtherBalance;

@@ -1,8 +1,9 @@
 // getEtherBalance.test.js
 const Web3 = require('web3');
-const { getEtherBalance } = require('./path/to/your/file'); // Adjust the path to your function file
+const getEtherBalance  = require('../src/get-balance'); // Adjust the path to your function file
 
 // Mocking Web3 to prevent actual network requests during tests
+console.log(`message: ${getEtherBalance}`);
 jest.mock('web3', () => {
     const mWeb3 = {
         eth: {
