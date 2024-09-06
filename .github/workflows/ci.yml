@@ -29,8 +29,8 @@ jobs:
 
             - name: Run tests
               env:
-                  INFURA_API_KEY: ${{ secrets.INFURA_API_KEY }} # Accessing the secret from GitHub environment
-                  ETHEREUM_NETWORK: ${{ secrets.ETHEREUM_NETWORK }} # Accessing the secret from GitHub environment
-                  FROM: ${{ secrets.FROM }} # Accessing the secret from GitHub environment
+                  INFURA_API_KEY: ${{ secrets.INFURA_API_KEY }}
+                  ETHEREUM_NETWORK: ${{ secrets.ETHEREUM_NETWORK }}
+                  FROM: ${{ secrets.FROM }}
               run: yarn test
 
