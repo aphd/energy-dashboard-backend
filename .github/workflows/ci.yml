@@ -2,30 +2,35 @@
 name: CI
 
 on:
-  push:
-    branches: [main]  # Runs on push to the main branch
-  pull_request:
-    branches: [main]  # Runs on pull request to the main branch
+    push:
+        branches: [main] # Runs on push to the main branch
+    pull_request:
+        branches: [main] # Runs on pull request to the main branch
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+    test:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [22.x]  # Define Node.js versions to test against
+        strategy:
+            matrix:
+                node-version: [22.x] # Define Node.js versions to test against
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: yarn install
+            - name: Install dependencies
+              run: yarn install
 
-    - name: Run tests
-      run: yarn test
+            - name: Run tests
+              env:
+                  INFURA_API_KEY: ${{ secrets.INFURA_API_KEY }} # Accessing the secret from GitHub environment
+                  ETHEREUM_NETWORK: ${{ secrets.ETHEREUM_NETWORK }} # Accessing the secret from GitHub environment
+                  FROM: ${{ secrets.FROM }} # Accessing the secret from GitHub environment
+              run: yarn test
+
