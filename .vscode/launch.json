@@ -23,7 +23,7 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/src/send-ether.js"
+			"program": "${workspaceFolder}/src/transaction.js"
 		}
 	]
 }
