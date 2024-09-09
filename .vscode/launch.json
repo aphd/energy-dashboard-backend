@@ -7,6 +7,12 @@
 		{
 			"type": "node",
 			"request": "launch",
+			"name": "connection",
+			"program": "${workspaceFolder}/src/connection.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
 			"name": "get balance",
 			"program": "${workspaceFolder}/src/get-balance.js"
 		},
