@@ -21,8 +21,8 @@
             [
                 "jest-html-reporters",
                 {
-                    "publicPath": "./html-report",
-                    "filename": "report.html",
+                    "publicPath": "./dist",
+                    "filename": "index.html",
                     "expand": true
                 }
             ]
