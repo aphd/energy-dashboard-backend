@@ -7,6 +7,12 @@
 		{
 			"type": "node",
 			"request": "launch",
+			"name": "connection",
+			"program": "${workspaceFolder}/src/connection.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
 			"name": "get balance",
 			"program": "${workspaceFolder}/src/get-balance.js"
 		},
@@ -17,7 +23,7 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/src/send-ether.js"
+			"program": "${workspaceFolder}/src/transaction.js"
 		}
 	]
 }

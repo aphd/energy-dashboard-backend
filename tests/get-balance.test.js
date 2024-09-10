@@ -2,7 +2,7 @@
 const {getEtherBalance} = require('../src/get-balance'); // Adjust the path to your function file
 
 
-describe('balance', () => {
+describe('Balance', () => {
     test('Should be able to read the balance of a given address.', async () => {
         const balance = await getEtherBalance();
         expect(typeof balance).toBe('number');
