@@ -3,3 +3,4 @@
 
 ## References
 - The front-end/web interface for this application can be found on the GitHub repository: https://github.com/aphd/energy-dashboard
+- The dashboard is live at https://aphd.github.io/energy-dashboard/
