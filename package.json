@@ -9,9 +9,24 @@
     },
     "devDependencies": {
         "@types/jest": "^29.5.12",
-        "jest": "^29.7.0"
+        "jest": "^29.7.0",
+        "jest-html-reporters": "^3.1.7"
     },
     "scripts": {
         "test": "jest"
+    },
+    "jest": {
+        "reporters": [
+            "default",
+            [
+                "jest-html-reporters",
+                {
+                    "publicPath": "./dist",
+                    "filename": "index.html",
+                    "expand": true
+                }
+            ]
+        ]
     }
 }
+
